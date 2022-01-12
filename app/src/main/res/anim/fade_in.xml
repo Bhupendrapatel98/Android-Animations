@@ -8,3 +8,14 @@
         android:toAlpha="1.0"/>
 
 </set>
+
+<!--
+set -> A container that holds other animation elements
+        (<alpha>, <scale>, <translate>, <rotate>)
+
+alpha -> A fade-in or fade-out animation. Represents an AlphaAnimation
+
+fromAlpha -> Starting opacity offset, where 0.0 is transparent and 1.0 is opaque.
+toAlpha -> Ending opacity offset, where 0.0 is transparent and 1.0 is opaque.
+
+-->

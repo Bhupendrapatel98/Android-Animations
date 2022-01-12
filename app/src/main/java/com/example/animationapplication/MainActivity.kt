@@ -23,11 +23,17 @@ class MainActivity : AppCompatActivity() {
     lateinit var animBounce: Animation
     lateinit var animSequential: Animation
     lateinit var animTogether: Animation
+    lateinit var sample: Animation
     lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+
+        mainBinding.btnsample.setOnClickListener{
+            sample = AnimationUtils.loadAnimation(applicationContext, R.anim.sample_animation)
+            mainBinding.txtSample.startAnimation(sample)
+        }
 
         mainBinding.btnFadeIn.setOnClickListener{
             animFadeIn = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
